@@ -73,3 +73,36 @@ if (age >= 18){
     result.textContent =`You are too young`;
 }
  }
+
+
+ const subscribe = document.getElementById(`checkbox`);
+ const visa = document.getElementById(`visa`);
+ const card = document.getElementById(`card`);
+ const payPal = document.getElementById(`pal`);
+ const submit = document.getElementById(`submit`);
+ const textResult = document.getElementById(`textresult`);
+
+ submit.onclick = function(){
+    if(subscribe.checked){
+        textResult.textContent = `You are subscribe`;
+        console.log( `You are subscribe`);
+    } else{
+        textResult.textContent = `You are not sunscribe`;
+        console.log(`You are not sunscribe`);
+    }
+     if(visa.checked){
+        textResult.textContent = `You have Visa`; 
+        console.log(`You have Visa`);
+    }else if(payPal.checked){
+        textResult.textContent = `You have payPal`;
+        console.log(`You have payPal`); 
+    } else if(card.checked){
+        textResult.textContent = `You have MasterCard`; 
+        console.log(`You have MasterCard`); 
+    }else{
+        textResult.textContent = `You have not choose`;  
+        console.log(`You have not choose`);  
+    }
+
+ }
+ console.log(submit.onclick());
