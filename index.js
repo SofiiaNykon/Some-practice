@@ -40,15 +40,36 @@ myButton.onclick = function(){
 //     alert("Tou are too young");
 // }
 
-let age = 13;
-let isLoggened = true;
-if(age>= 18){
-    console.log("Welcome here");
-}else{
-    console.log("Sorry. you are not 18 y.o.:(");
+// let age = 13;
+// let isLoggened = true;
+// if(age>= 18){
+//     console.log("Welcome here");
+// }else{
+//     console.log("Sorry. you are not 18 y.o.:(");
+// }
+// if (isLoggened){
+//    window.log("You should sign up here")
+// } else {
+//     alert("You have alredy loggened person")
+// }
+
+
+const number = document.getElementById("numberContainer");
+const btnSubmit = document.getElementById("submit");
+const result = document.getElementById("result");
+let age;
+
+ btnSubmit.onclick = function(){
+age = number.value;
+age = Number(age);
+
+if (age >= 18){
+    result.textContent = `You suit to this work`;
+}else if(age == 0 ){
+    result.textContent =`You wrote incorrect`;
+}else if(age < 0){
+    result.textContent =`It is false number of your age `;
+}else if(age< 18){
+    result.textContent =`You are too young`;
 }
-if (isLoggened){
-   window.log("You should sign up here")
-} else {
-    alert("You have alredy loggened person")
-}
+ }
