@@ -77,31 +77,32 @@ if (age >= 18){
 
  const subscribe = document.getElementById(`checkbox`);
  const visa = document.getElementById(`visa`);
- const card = document.getElementById(`card`);
- const payPal = document.getElementById(`pal`);
+ const masterCard = document.getElementById(`mascard`);
+ const payPal = document.getElementById(`pay`);
  const submit = document.getElementById(`submit`);
  const textResult = document.getElementById(`textresult`);
+ const payResult = document.getElementById(`payresult`);
 
  submit.onclick = function(){
-    if(subscribe.checked){
+    if(subscribe.checked === true){
         textResult.textContent = `You are subscribe`;
-        console.log( `You are subscribe`);
+        // console.log( `You are subscribe`);
     } else{
         textResult.textContent = `You are not sunscribe`;
-        console.log(`You are not sunscribe`);
+        // console.log(`You are not sunscribe`);
     }
-     if(visa.checked){
-        textResult.textContent = `You have Visa`; 
-        console.log(`You have Visa`);
-    }else if(payPal.checked){
-        textResult.textContent = `You have payPal`;
-        console.log(`You have payPal`); 
-    } else if(card.checked){
-        textResult.textContent = `You have MasterCard`; 
-        console.log(`You have MasterCard`); 
+     if(visa.checked === true){
+        payResult.textContent = `You have paid with Visa`; 
+        // console.log(`You have Visa`);
+    }else if(payPal.checked=== true){
+        payResult.textContent = `You have paid payPal`;
+        // console.log(`You have payPal`); 
+    } else if(masterCard.checked=== true){
+        payResult.textContent = `You have paid with MasterCard`; 
+        // console.log(`You have MasterCard`); 
     }else{
-        textResult.textContent = `You have not choose`;  
-        console.log(`You have not choose`);  
+        payResult.textContent = `You have not paid yet`;  
+        // console.log(`You have not choose`);  
     }
 
  }
