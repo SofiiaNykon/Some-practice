@@ -55,7 +55,7 @@ myButton.onclick = function(){
 
 
 const number = document.getElementById("numberContainer");
-const btnSubmit = document.getElementById("submit");
+const btnSubmit = document.getElementById("submitOne");
 const result = document.getElementById("result");
 let age;
 
@@ -79,31 +79,25 @@ if (age >= 18){
  const visa = document.getElementById(`visa`);
  const masterCard = document.getElementById(`mascard`);
  const payPal = document.getElementById(`pay`);
- const submit = document.getElementById(`submit`);
+ const submitTwo = document.getElementById(`submitTwo`);
  const textResult = document.getElementById(`textresult`);
  const payResult = document.getElementById(`payresult`);
 
- submit.onclick = function(){
+ submitTwo.onclick = function(){
     if(subscribe.checked === true){
         textResult.textContent = `You are subscribe`;
-        // console.log( `You are subscribe`);
     } else{
         textResult.textContent = `You are not sunscribe`;
-        // console.log(`You are not sunscribe`);
     }
      if(visa.checked === true){
         payResult.textContent = `You have paid with Visa`; 
-        // console.log(`You have Visa`);
     }else if(payPal.checked=== true){
         payResult.textContent = `You have paid payPal`;
-        // console.log(`You have payPal`); 
     } else if(masterCard.checked=== true){
         payResult.textContent = `You have paid with MasterCard`; 
-        // console.log(`You have MasterCard`); 
     }else{
         payResult.textContent = `You have not paid yet`;  
-        // console.log(`You have not choose`);  
     }
 
- }
- console.log(submit.onclick());
+ };
+ console.log(submitTwo.onclick());
