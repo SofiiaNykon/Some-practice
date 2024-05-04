@@ -100,4 +100,25 @@ if (age >= 18){
     }
 
  };
- console.log(submitTwo.onclick());
+
+let user = false;
+let isYouserLoggined = user ? 'yes' : `no`;
+console.log(isYouserLoggined);
+
+
+const price = document.getElementById(`price`);
+const submitButton = document.getElementById(`submitButton`);
+const summeResult = document.getElementById(`summeResult`);
+let money;
+
+submitButton.onclick = function(){
+money =price.value;
+money =Number(money);
+
+if(money >= 100){
+    summeResult.textContent= "You get 10% discount";
+}else if(money< 100) {
+    summeResult.textContent = "For discount you should  buy somrthing on 100$";
+} if(money >= 200){
+    summeResult.textContent= "You get 25% discount";
+}};
