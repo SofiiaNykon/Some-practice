@@ -87,7 +87,7 @@ if (age >= 18){
     if(subscribe.checked === true){
         textResult.textContent = `You are subscribe`;
     } else{
-        textResult.textContent = `You are not sunscribe`;
+        textResult.textContent = `You are not subscribe`;
     }
      if(visa.checked === true){
         payResult.textContent = `You have paid with Visa`; 
@@ -101,24 +101,81 @@ if (age >= 18){
 
  };
 
-let user = false;
-let isYouserLoggined = user ? 'yes' : `no`;
-console.log(isYouserLoggined);
+//  const submitTwo.onclick = (subscribe.checked)={
+//     if(subscribe.checked) textResult.textContent = `You are subscribe`{
+//         return `You are not subscribe`;
+//     }
+//     if(visa.checked) payResult.textContent = `You have paid with Visa`; 
+//     if(payPal.checked) payResult.textContent =  `You have paid payPal`; 
+//     if(masterCard.checked) payResult.textContent =  `You have paid with MasterCard`; 
+//  }
+
+
+// let user = false;
+// let isYouserLoggined = user ? 'yes' : `no`;
+// console.log(isYouserLoggined);
 
 
 const price = document.getElementById(`price`);
-const submitButton = document.getElementById(`submitButton`);
+let submitButton = document.getElementById(`submitButton`);
 const summeResult = document.getElementById(`summeResult`);
 let money;
-
-submitButton.onclick = function(){
+const discountTen = 100;
+const discountTwelve = 200;
+submitButton.onclick = () =>{
 money =price.value;
 money =Number(money);
+console.log(money);
+ if(money >= 100 && money< 200) summeResult.textContent = `${money / discountTen - money}`;
+    if(money >= 200) summeResult.textContent = `${money - (money / discountTwelve)}`;
+    return `You get no discount`;
+    };
 
-if(money >= 100){
-    summeResult.textContent= "You get 10% discount";
-}else if(money< 100) {
-    summeResult.textContent = "For discount you should  buy somrthing on 100$";
-} if(money >= 200){
-    summeResult.textContent= "You get 25% discount";
-}};
+// //Text 
+// if(money >= 100){
+//     summeResult.textContent= "You get 10% discount";
+// }else if(money< 100) {
+//     summeResult.textContent = "For discount you should  buy somrthing on 100$";
+// } if(money >= 200){
+//     summeResult.textContent= "You get 25% discount";
+// }};
+// if(money >= 100){
+//     summeResult = money - money * (discountTen/100);
+// }else if(money< 100) {
+//     summeResult.textContent = "For discount you should  buy somrthing on 100$";
+// } if(money >= 200){
+//     summeResult = money - money * (discountTwelve/100);
+// }};
+
+
+
+
+// //Console
+
+let amount = 111;
+let discount = amount >= 100 ? 10 : 0;
+console.log(`Your total is $${amount - amount * (discount/100)}`);
+
+let phonenumber = `123456`;
+phonenumber=phonenumber.padStart("15", " 0");
+console.log(phonenumber);
+
+const fullName = `Sofiia Nykonovych`;
+let firstName = fullName.slice(0, 5);
+let lastName =fullName.slice(7, 17);
+let firstChar = fullName.slice(1,4);
+let lastChar = fullName.slice(6);
+
+console.log(firstName);
+console.log(lastChar);
+
+const email = "sofinik@gmail.com";
+userName = email.slice(0, email.indexOf(`@`));
+extension = email.slice(email.indexOf(`@`) )
+console.log(userName);
+console.log(extension);
+ 
+
+const message = "Good nignt Mau";
+let  first = message.slice(11, 14);
+console.log(first);
