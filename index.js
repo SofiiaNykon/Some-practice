@@ -120,14 +120,14 @@ const price = document.getElementById(`price`);
 let submitButton = document.getElementById(`submitButton`);
 const summeResult = document.getElementById(`summeResult`);
 let money;
-const discountTen = 100;
-const discountTwelve = 200;
+const discountTen = 10;
+const discountTwelve = 20;
 submitButton.onclick = () =>{
 money =price.value;
 money =Number(money);
 console.log(money);
- if(money >= 100 && money< 200) summeResult.textContent = `${money / discountTen - money}`;
-    if(money >= 200) summeResult.textContent = `${money - (money / discountTwelve)}`;
+ if(money >= 100 && money< 200) summeResult.textContent = `You get 10% discount, your amount:  ${(money-(money * discountTen / 100))}`;
+    if(money >= 200) summeResult.textContent = `You get 20% discount, your amount: ${(money-(money * discountTwelve /100))}`;
     return `You get no discount`;
     };
 
@@ -169,13 +169,151 @@ let lastChar = fullName.slice(6);
 console.log(firstName);
 console.log(lastChar);
 
-const email = "sofinik@gmail.com";
-userName = email.slice(0, email.indexOf(`@`));
-extension = email.slice(email.indexOf(`@`) )
-console.log(userName);
-console.log(extension);
+// const email = "sofinik@gmail.com";
+// userName = email.slice(0, email.indexOf(`@`));
+// extension = email.slice(email.indexOf(`@`) )
+// console.log(userName);
+// console.log(extension);
  
+//Method one
+// const message = "Good nignt Mau";
+// let  first = message.slice(11, 14);
+// console.log(first);
 
-const message = "Good nignt Mau";
-let  first = message.slice(11, 14);
-console.log(first);
+// let userName = window.prompt("Enter your user name");
+// userName = userName.trim();
+// let letter = userName.charAt(0);
+// letter = letter.toUpperCase();
+
+
+// let chap = userName.slice(1);
+
+// chap =chap.toLowerCase();
+// userName= letter+chap;
+// console.log(userName);
+
+//Mehtod 2
+
+// let userName = window.prompt("Enter your user name");
+// userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
+// console.log(userName);
+
+// let name = ``;
+// while(name === `` || name === Number) {
+//     name = window.prompt(`Enter your name  `);
+// }
+// console.log(name);
+
+// let isUserLoggined =false;
+// let usersname;
+// let password;
+// while(!isUserLoggined){
+//     usersname = window.prompt("Your user name");
+//     password = window.prompt("Your password");
+//     if(usersname==="myUser" && password==="mypassword"){
+//         isUserLoggined = true;
+//         console.log(`you did it`);} else{
+//             console.log(`Please try again`);
+//         }
+
+// }
+
+// for(let i = 10; i>0; i-=3){
+//     console.log(i);
+// }
+// console.log(`Hurrey`);
+
+for(let i = 0; i <= 20,i++;){
+    if(i==13){
+        continue;
+    }else{
+        console.log(i);
+    }
+}
+
+let numb = [1, 2, 6, 3, 4, 5];
+numb.reverse();
+console.log(numb);
+
+let myName = "Sofiia Nykonov";
+let separate = [...myName].join("/");
+console.log(separate);
+let fruits  = [ "apple", "orange", "banana"];
+let veget = ["carrot", "potato"];
+// let foods =  [...fruits, ...veget, "egs"];
+// console.log(foods);
+
+
+// function openFridge(...foods){
+//     console.log(...foods);
+// }
+function getFood(...foods){
+    return foods;
+}
+const food1 ="pizza";
+const food2 ="hamburger";
+const food3 ="cushi";
+const food4 ="soup";
+// openFridge(food1, food2, food3);
+const foods = getFood(food1, food2, food3);
+console.log(foods);
+
+
+// function sum(...numbers){
+//     let result = 0;
+//     for (let number of numbers){
+//         result += number;
+//     }
+//     return result;
+// }
+function getAvarge(...numbers){
+    let result = 0;
+    for (let number of numbers){
+        result += number;
+    }
+    return result  / numbers.length;
+}
+const total = getAvarge(10, 110, 23, 70);
+console.log(total);
+
+function combineStrings(...strings){
+    return strings.join(" -");
+}
+const fullMyName = combineStrings("Mr.", "Spongbpb", "Mauri");
+console.log(fullMyName);
+
+function generatePassword(length, includeSymbols, includeNumbers, includeUperCase, includeLowerCase){
+   const lowercaseChars = "qwertyuioplkjhgfdsazxcvbnm";
+   const uppercaseChars = "QWERTYUIOPLKJHGFDSAZXCVBNM";
+   const numberChars = "0123456789";
+   const symbolChars = "@/$%&*-=_+()!";
+   let allowedChars = "";
+   let password = "";
+   allowedChars += includeLowerCase ? lowercaseChars : "";
+   allowedChars += includeUperCase ? uppercaseChars : "";
+   allowedChars += includeNumbers ? numberChars : "";
+   allowedChars += includeSymbols ? symbolChars : "";
+if(length<= 0){
+return `(password length mist be at least 1)`;
+}
+if(allowedChars.length === 0){
+    return `(At least 1)`;
+}
+for(let i = 0; i < length; i++){
+    const randomIndex = Math.floor(Math.random() * allowedChars.length);
+    password += allowedChars [randomIndex];
+}
+    return password;}
+
+
+const passwordLength  = 10;
+const includeNumbers = true;
+const includeUperCase = true;
+const includeLowerCase = true;
+const includeSymbols = true;
+const password = generatePassword(passwordLength,
+     includeNumbers,
+      includeUperCase,
+       includeLowerCase, 
+       includeSymbols);
+console.log(`generate Password: ${password}`);
