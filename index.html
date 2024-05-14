@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=deveice-width, initial-scale=deveice-initial-scale">
-        <link rel="styleheet" href="./style.css">
+        <link rel="stylesheet" href="./style.css">
         <title>Document</title>
     </head>
     <body class="roll">
@@ -15,25 +15,25 @@
     </div>
 
         <div class="age">
-            <h1>Enter your age</h1>
-            <input id="numberContainer" type="text">
+            <h1 class="age-header">Enter your age</h1>
+            <input id="numberContainer" type="text" value="0">
             <button id="submitOne" type="submit">submit</button><br>
            <p id="result"></p><br><br>
         </div>
-        <div>
-           <input type="checkbox" id="checkbox"> 
-           <label for="checkbox">subscribe</label><br>
+        <div class="cards">
+           <input type="checkbox" id="checkbox" > 
+           <label for="checkbox" class="text">subscribe</label><br>
 <br>
-           <input type="radio" id="visa" name="card">
-           <label for="visa">Visa</label><br>
+           <input type="radio" id="visa" name="card" class="text">
+           <label for="visa" class="text">Visa</label><br>
 
-           <input type="radio" id="mascard" name="card">
-           <label for="mascard">MasterCard</label><br>
+           <input type="radio" id="mascard" class="text" name="card">
+           <label for="mascard" class="text">MasterCard</label><br>
 
-           <input type="radio" id="pay" name="card">
-           <label for="pay">PayPal</label><br><br>
+           <input type="radio" id="pay" name="card" class="text">
+           <label for="pay" class="text">PayPal</label><br><br>
 
-<button type="submit" id="submitTwo">submit</button>
+<button type="submit" class="text" id="submitTwo">submit</button>
 <p id="textresult"></p>
 <p id="payresult"></p>
         </div>

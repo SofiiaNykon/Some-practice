@@ -17,9 +17,16 @@ max-width: 100px;
 display: flex;
 }
 .age{
+    margin-top: 50em;
+    margin-left: 300px;
     background-color: #babae1;
     border-radius: 10px;
     text-align: center;
+    margin-top: 50em;
+    margin-left: 300px;
+    height: 36rem;
+    font-weight: 900;
+    padding: 150px;
 }
 #numberContainer{
     border-radius: 10px;
@@ -29,4 +36,39 @@ display: flex;
     border: none;
     background-color: #252121;
     color: white;
+}
+h1 .age-header{
+    width: 300px;
+    font-size: 36px;
+    margin-left: 30px;
+}
+#numberContainer{
+    font-size: 30px;
+    padding-top: 30px;
+    margin-top: 40px;    
+}
+#submitOne{
+    font-size: 40px;
+    margin-top: 50px;
+}
+#result{
+    font-size: 30px;
+    margin-top: 100px;
+}
+.cards{
+    margin-top: 50em;
+    margin-left: 10px;
+    background-color: #faf759;
+    border-radius: 10px;
+    margin-left: 10px;
+    height: 30rem;
+    font-weight: 900;
+    padding: 200px;
+        
+}
+.text{
+    font-size: 60px;
+    border-radius: 10px;
+    background-color: black;
+    color: white; 
 }
